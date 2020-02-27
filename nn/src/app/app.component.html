@@ -1,0 +1,44 @@
+<h2>{{today}}</h2>
+<h2>{{today | date}}</h2>
+<h2>{{today | date:'shortDate'}}</h2>
+<h2>{{today | date:'mediumDate'}}</h2>
+<h2>{{today | date:'longDate' | uppercase}}</h2>
+<h2>{{today | date:'fullDate' | uppercase}}</h2>
+<h2>{{today | date:'dd-MMM-yyyy'}}</h2>
+<h2>{{today | date:'dd/MM/yyyy'}}</h2>
+<h2>{{today | date:'dd MMMM, yy'}}</h2>
+
+<h3 appMyStyle [myBkColor]="'cyan'">{{'international game' | titlecase }}</h3>
+
+<h3>{{'international game' | slice:-4:-2 | titlecase}}</h3>
+<h3>{{'international game' | reverse}}</h3>
+<h2>{{flowers}}</h2>
+<h2>{{3 | cube}}</h2>
+<h2>{{3 | pow:4}}</h2>
+<h2>{{3.3 | square | number:'.1-2'}}</h2>
+<ul>
+    <li *ngFor="let flower of flowers | slice:2:4">{{flower}}</li>
+</ul>
+<h1>{{3.76754}}</h1>
+<h1>{{3.74754 | number:'.1-2'}}</h1>
+<h1>{{3.74754 | number:'2.1-3'}}</h1>
+<h1>{{3.7 | number:'2.2-3'}}</h1>
+
+
+
+<h1><b>Welcome To {{title}}</b></h1>
+
+<app-greet-user></app-greet-user>
+<app-hello-user></app-hello-user>
+
+<app-person-form></app-person-form>
+<app-city-list></app-city-list>
+<app-country-list></app-country-list>
+
+<app-day-planner></app-day-planner>
+<app-product-list></app-product-list>
+<div>
+    <input name="msg" [(ngModel)]="msg" placeholder="enter name">
+    <input name="age" [(ngModel)]="age" placeholder="enter age">
+</div>
+<app-life-cycle-hook [childmessage]="msg" [age]="age"></app-life-cycle-hook>

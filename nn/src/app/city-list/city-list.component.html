@@ -1,0 +1,32 @@
+<div *ngIf="togglelist" class="d1" >
+    <H2 style="color: steelblue;">LIST OF CITIES</H2>
+<ol>
+<li *ngFor="let city of cities" class="d2">{{city}}</li>
+</ol>
+</div>
+<div *ngIf="togglelist">
+    <table [class.c1]="hastableclass">
+        <tr *ngFor="let city of cities" [title]="city+' details'" (click)="ondelete(city)" class="d2"><td [class.c2]="hastableclass">{{city}}</td></tr>
+    </table>
+</div>
+<div *ngIf="togglelist">
+    <select [class]="myclasses">
+        <option *ngFor="let city of cities"  value="city" class="d2">{{city}}</option>
+    </select>
+</div>
+<div>
+    <label>enter city name:</label>
+    <input #cityTxtFld>
+    <button (click)="onsave(cityTxtFld.value)">save</button>
+</div>
+
+<div #para1><label>hello</label><button (click)="onsave(para1.value)">ohh</button></div>
+
+<div>
+<button (click)="ontoggle()">{{togglelist?'hide':'show'}}</button> 
+<button (click)="deletefirst()">delete first</button>  
+<button (click)="deletelast()">delete last</button> 
+<button (click)="addfirst(cityTxtFld.value)">add first</button> 
+<button (click)="onsave(cityTxtFld.value)">add last</button> 
+<button (click)="onchange()">change</button>
+</div>

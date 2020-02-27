@@ -1,0 +1,24 @@
+<p>country-list works!</p>
+
+<div *ngIf="togglelist" class="d1" >
+    <H2 style="color: steelblue;">LIST OF COUNTRIES</H2>
+<ol>
+<li *ngFor="let country of countries" class="d2" >{{country}}</li>
+</ol>
+</div>
+<div *ngIf="togglelist">
+    <table>
+        <tr *ngFor="let country of countries" (click)="ondelete(country)" class="d2"><td>{{country}}</td></tr>
+    </table>
+</div>
+<div *ngIf="togglelist">
+    <select>
+        <option *ngFor="let country of countries" value="country" class="d2">{{country}}</option>
+    </select>
+</div>
+<div>
+    <label>enter country name:</label>
+    <input #cityTxtFld>
+    <button (click)="onsave(cityTxtFld.value)">save</button>
+</div>
+<button (click)="ontoggle()">{{togglelist?'hide':'show'}}</button>  

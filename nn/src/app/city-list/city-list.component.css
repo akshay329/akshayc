@@ -1,0 +1,41 @@
+.d1{
+    background-color: navajowhite;
+    color: tomato;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: paleturquoise;
+    border: 1px solid dimgray;
+    border-radius: 15px;
+    width: 50%;   
+}
+.d2{
+    border: 1px solid tomato;
+    background-color: darkcyan;
+    color:  black;
+    border-radius: 5px;
+    border-width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 20%;
+    list-style-type: square;
+}
+button:hover{
+    background-color: darkcyan;
+    color: darkgray;
+    border: 5px solid teal;
+    border-radius: 20cm;
+    
+}
+table,th,td{
+    border: 2px solid steelblue;
+}
+.c1{
+    background-color: violet;
+}
+.c2{
+    background-color: lightcyan;
+}
+li:hover{
+    color: lightcyan;
+}
